@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gJu-1w-wsk">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5eC-3A-3fI">
+            <objects>
+                <viewController id="gJu-1w-wsk" customClass="ViewController" customModule="ML_TwitterAnalysis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a7b-3t-cqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwa-r8-Fd9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-Nf-Ipl">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="119.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-zl-NGZ">
+                                        <rect key="frame" x="138" y="290" width="99" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Predict!">
+                                            <color key="titleColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="predictPressed:" destination="gJu-1w-wsk" eventType="touchUpInside" id="uRJ-Qv-1Rf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="😐" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep9-2h-KsB">
+                                        <rect key="frame" x="58" y="90" width="258" height="90"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How do people feel about..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HP9-ee-vOF">
+                                        <rect key="frame" x="107" y="360" width="161" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Rge-zl-NGZ" firstAttribute="leading" secondItem="jwa-r8-Fd9" secondAttribute="leading" constant="138" id="0JJ-Oc-KVR"/>
+                                    <constraint firstAttribute="bottom" secondItem="HP9-ee-vOF" secondAttribute="bottom" constant="273" id="IE5-ME-rG8"/>
+                                    <constraint firstItem="HP9-ee-vOF" firstAttribute="leading" secondItem="jwa-r8-Fd9" secondAttribute="leading" constant="107" id="OYR-YC-4XZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rge-zl-NGZ" secondAttribute="trailing" constant="138" id="hEx-Yx-5Sl"/>
+                                    <constraint firstItem="HP9-ee-vOF" firstAttribute="top" secondItem="Rge-zl-NGZ" secondAttribute="bottom" constant="22" id="iox-FV-VT8"/>
+                                    <constraint firstItem="Rge-zl-NGZ" firstAttribute="top" secondItem="Ep9-2h-KsB" secondAttribute="bottom" constant="110" id="muA-oS-ihI"/>
+                                    <constraint firstItem="HP9-ee-vOF" firstAttribute="top" secondItem="Rge-zl-NGZ" secondAttribute="bottom" constant="22" id="nnO-qg-gv3"/>
+                                    <constraint firstAttribute="trailing" secondItem="HP9-ee-vOF" secondAttribute="trailing" constant="107" id="ohx-Qy-Smw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jwa-r8-Fd9" firstAttribute="leading" secondItem="Cel-SL-yWb" secondAttribute="leading" id="1PA-Ld-fKM"/>
+                            <constraint firstItem="jwa-r8-Fd9" firstAttribute="top" secondItem="Cel-SL-yWb" secondAttribute="top" id="80N-8T-Zee"/>
+                            <constraint firstItem="jwa-r8-Fd9" firstAttribute="trailing" secondItem="Cel-SL-yWb" secondAttribute="trailing" id="mkd-SP-Brx"/>
+                            <constraint firstItem="jwa-r8-Fd9" firstAttribute="bottom" secondItem="Cel-SL-yWb" secondAttribute="bottom" id="zoB-8e-XUJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cel-SL-yWb"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="jwa-r8-Fd9" id="5UJ-WU-hbt"/>
+                        <outlet property="sentimentLabel" destination="Ep9-2h-KsB" id="RGg-ER-dLz"/>
+                        <outlet property="textField" destination="HP9-ee-vOF" id="eKD-X0-T0H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z31-Pp-XLb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
